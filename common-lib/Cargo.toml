@@ -2,5 +2,7 @@
 name = "common-lib"
 version = "1.0.0"
 edition = "2024"
+description = "Common library for shared functionality Takapedia"
+license = "Apache-2.0"
 
 [dependencies]
