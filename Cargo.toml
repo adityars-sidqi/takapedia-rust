@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "common-lib",
+    "notification-service",
+    "payment-service",
+]
+
+resolver = "3"
