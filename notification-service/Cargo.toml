@@ -5,14 +5,35 @@ edition = "2024"
 
 [dependencies]
 common-lib = "1.0.0"
+# Error handling
 anyhow = "1.0.98"
+
+# Web framework (opsional untuk health check, API, dsb.)
 axum = "0.8.4"
 axum-extra = "0.10.1"
-axum-test = "17.3.0"
 http = "1.3.1"
-serde = { version = "1.0.219", features = ["derive"] }
-tokio = { version = "1.47.1", features = ["full"] }
 tower = "0.5.2"
+
+# Async runtime
+tokio = { version = "1.47.1", features = ["full"] }
+
+# Serialization
+serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.142"
+
+# Logging / Tracing
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+
+# Kafka client
+rdkafka = { version = "0.36", features = ["tokio"] }
+
+# SMTP email sender
+lettre = { version = "0.11", features = ["tokio1", "builder"] }
+
+# Env loader
+dotenvy = "0.15"
+
+[dev-dependencies]
+# Untuk test HTTP route
+axum-test = "17.3.0"
